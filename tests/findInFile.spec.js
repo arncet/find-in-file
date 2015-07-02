@@ -83,7 +83,6 @@ describe('Find in file(s)', function() {
       files: ['test1.json', 'test2.json'],
       find: testString
     }, function(error, files) {
-      console.log(files);
       var firstMatch = files.filter(function(file) {
         return file.file === 'test1.json';
       })[0];
