@@ -1,1 +1,1 @@
-module.exports = require('./lib/replaceInFile');
+module.exports = require('./lib/findInFile');

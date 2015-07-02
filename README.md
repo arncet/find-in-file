@@ -1,9 +1,9 @@
-# Replace in file
-A simple utility to quickly replace text in one or more files.
+# find in file
+A simple utility to quickly find text in one or more files.
 
 ## Installation
 ```shell
-npm install replace-in-file
+npm install find-in-file
 ```
 
 ## Usage
@@ -20,13 +20,20 @@ replace({
     'path/to/other/file',
   ],
 
-  //Replacement to make
-  replace: /Find\sme/g,
-  with: 'Replacement'
-}, cb);
+  //Find a regex
+  find: /Find\sme/g,
+
+  //Or a string
+  find: 'Find me',
+}, function(err, matchedFiles) {
+  /*
+    matchedFiles => [ { file: 'test1.json', occurrences: 1 },
+                      { file: 'test2.json', occurrences: 2 } ]
+  */
+});
 ```
 
 ## License
 (MIT License)
 
-Copyright 2015, [Adam Buczynski](http://adambuczynski.com)
+Copyright 2015, [Dave Jeffery](http://www.davejeffery.com) (Original Fork by [Adam Buczynski](http://adambuczynski.com))
