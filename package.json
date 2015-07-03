@@ -1,6 +1,6 @@
 {
   "name": "find-in-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple utility to quickly find text in one or more files.",
   "homepage": "https://github.com/davej/find-in-file#readme",
   "author": {

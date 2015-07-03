@@ -78,7 +78,7 @@ describe('Find in file(s)', function() {
   /**
    * Replace in multiple file
    */
-  it('should work with strings too', function(done) {
+  it('should work with strings', function(done) {
     find({
       files: ['test1.json', 'test2.json'],
       find: testString
@@ -95,6 +95,19 @@ describe('Find in file(s)', function() {
       expect(secondMatch.file).toBe('test2.json');
       expect(secondMatch.occurrences).toBe(2);
 
+      done();
+    });
+  });
+
+  /**
+   * Replace in multiple file
+   */
+  it('should work when there are no matches', function(done) {
+    find({
+      files: ['test1.json', 'test2.json'],
+      find: "bla bla"
+    }, function(error, files) {
+      expect(files.length).toBe(0);
       done();
     });
   });
